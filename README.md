@@ -4,6 +4,8 @@
 
 Just a small tooltip for ES6 and/or React.
 
+![smallTooltip](https://user-images.githubusercontent.com/6490641/84581443-c6ea3380-add8-11ea-9d92-94564feb488a.gif "small-tooltip")
+
 ## Installation
 
 ```bash
@@ -16,10 +18,10 @@ $ npm install small-tooltip
 
   // just paste these two lines of code in your main file (index.js.. or app.js..)
   // that's it, I will be always available in all the pages of your project!
+  // ..available for the dynamic elements as well..
 
   import smallTooltip from 'small-tooltip';
-  import 'small-tooltip/smallTooltip.css';
-
+  import 'small-tooltip/smallTooltip.css';    // <-- easy to customize
 
 ```
 
@@ -50,6 +52,10 @@ $ npm install small-tooltip
   }
 
 ```
+
+## Demo
+
+[Just a example project where you can see small-tooltip in action..](https://messagerimus.com)
 
 ## License
 
