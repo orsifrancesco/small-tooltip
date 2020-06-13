@@ -14,27 +14,35 @@ $ npm install small-tooltip
 
 ```jsx
 
-  // just paste this 2 lines of code in your main file (index.js.. or app.js..)
+  // just paste these two lines of code in your main file (index.js.. or app.js..)
+  // that's it, I will be always available in all the pages of your project!
 
   import smallTooltip from 'small-tooltip';
   import 'small-tooltip/smallTooltip.css';
 
-  // that's it, I will be always available in all the pages of your project!
 
 ```
 
 ```html
-  
+
+  <!-- html -->
+
   <div data-tip="I'm a small tooltip">Move your mouse here to see me</div>
 
 ```
 
 ```jsx
 
+  // simple javascript
+
+  document.body.insertAdjacentHTML('beforeend', `<i data-id="This is Love!!">❤❤❤</i>`);
+
+  // or React
+
   function App() {
 
     return (
-      <div data-tip="I'm another small tooltip">Move your mouse here to see me as well!</div>
+      <h2 data-tip="I'm another small tooltip">Move your mouse here to see me as well!</h2>
     );
 
   }

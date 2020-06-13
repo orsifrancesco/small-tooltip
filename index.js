@@ -35,7 +35,9 @@ class smallTooltipClass {
 		});
 
 		addEventListener("mousemove", (e) => {
-			this.moveSmallTooltip(e);
+			if (this.isIn) {
+				this.moveSmallTooltip(e);
+			}
 		});
 
 	}
