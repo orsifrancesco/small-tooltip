@@ -1,6 +1,6 @@
 {
   "name": "small-tooltip",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Just a small tooltip for ES6 and/or React.",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,9 @@
   },
   "keywords": [
     "tooltip",
+	"tool-tip",
+	"tool",
+	"tip",
     "component",
     "popup",
     "mini",
@@ -18,10 +21,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/orsifrancesco/mini-tooltip.git"
+    "url": "git+https://github.com/orsifrancesco/small-tooltip.git"
   },
   "bugs": {
-    "url": "https://github.com/orsifrancesco/mini-tooltip/issues"
+    "url": "https://github.com/orsifrancesco/small-tooltip/issues"
   },
-  "homepage": "https://github.com/orsifrancesco/mini-tooltip#readme"
+  "homepage": "https://github.com/orsifrancesco/small-tooltip#readme"
 }
