@@ -1,0 +1,26 @@
+{
+  "name": "mini-tooltip",
+  "version": "1.0.1",
+  "description": "Just a small tooltip for ES6 and/or React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tooltip",
+    "component",
+    "popup",
+    "mini",
+    "react"
+  ],
+  "author": "Francesco Orsi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orsifrancesco/mini-tooltip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orsifrancesco/mini-tooltip/issues"
+  },
+  "homepage": "https://github.com/orsifrancesco/mini-tooltip#readme"
+}
