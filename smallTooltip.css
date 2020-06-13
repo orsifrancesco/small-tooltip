@@ -1,4 +1,4 @@
-#mini-tooltip {
+#small-tooltip {
 
 	font-family: sans-serif;
 	font-size: 12px;
@@ -18,7 +18,7 @@
 
 }
 
-#mini-tooltip.show {
+#small-tooltip.show {
 
 	opacity: 1;
 	visibility: visible;

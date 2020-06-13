@@ -1,21 +1,21 @@
-# mini-tooltip
+# small-tooltip
 
-[![NPM version](https://img.shields.io/npm/v/mini-tooltip.svg?style=flat)](https://www.npmjs.com/package/mini-tooltip)
+[![NPM version](https://img.shields.io/npm/v/small-tooltip.svg?style=flat)](https://www.npmjs.com/package/small-tooltip)
 
 Just a small tooltip for ES6 and/or React.
 
 ## Installation
 
 ```bash
-$ npm install mini-tooltip
+$ npm install small-tooltip
 ```
 
 ## Examples
 
 ```jsx
 
-  import miniTooltip from 'mini-tooltip';
-  import 'mini-tooltip/miniTooltip.css';
+  import smallTooltip from 'small-tooltip';
+  import 'small-tooltip/smallTooltip.css';
 
   function App() {
 

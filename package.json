@@ -1,6 +1,6 @@
 {
-  "name": "mini-tooltip",
-  "version": "1.0.1",
+  "name": "small-tooltip",
+  "version": "1.0.2",
   "description": "Just a small tooltip for ES6 and/or React.",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "component",
     "popup",
     "mini",
+	"small",
     "react"
   ],
   "author": "Francesco Orsi",

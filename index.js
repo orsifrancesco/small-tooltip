@@ -1,11 +1,11 @@
-class miniTooltipClass {
+class smallTooltipClass {
 
     constructor() {
 
         this.injectHTML();
 		this.allTipsSelector = "*[data-tip]";
 		this.allTips = document.querySelectorAll(this.allTipsSelector);
-        this.dom = document.querySelector("#mini-tooltip");
+        this.dom = document.querySelector("#small-tooltip");
         this.events();
 
     }
@@ -17,47 +17,47 @@ class miniTooltipClass {
 			el.addEventListener("mouseenter", (e) => {
 				if(!e.target.matches(this.allTipsSelector)) { return; }
 				const text = e.target.getAttribute('data-tip');
-				if(text) { this.showMiniTooltip(e, text) }
+				if(text) { this.showSmallTooltip(e, text) }
 			});
 			
 			el.addEventListener("mousemove", (e) => {
-				this.moveMiniTooltip(e);
+				this.moveSmallTooltip(e);
 			});
 			
 			el.addEventListener("mouseleave", () => {
-				this.hideMiniTooltip();
+				this.hideSmallTooltip();
 			});
 			
 			el.addEventListener("click", () => {
-				this.hideMiniTooltip();
+				this.hideSmallTooltip();
 			});
 
 		});
 
     }
 
-    showMiniTooltip(e, text) {
-		this.moveMiniTooltip(e);
+    showSmallTooltip(e, text) {
+		this.moveSmallTooltip(e);
 		this.dom.innerHTML = text;
 		this.dom.classList.add("show");
 	}
 	
-	hideMiniTooltip() {
+	hideSmallTooltip() {
 		this.dom.classList.remove("show");
 	}
 	
-	moveMiniTooltip(e) {
+	moveSmallTooltip(e) {
 		this.dom.style.top = e.pageY;
 		this.dom.style.left = e.pageX;
 		this.dom.style.marginLeft = this.dom.offsetWidth/-2;
 	}
 
     injectHTML() {
-        document.body.insertAdjacentHTML('beforeend', '<div id="mini-tooltip"></div>');
+        document.body.insertAdjacentHTML('beforeend', '<div id="small-tooltip"></div>');
     }
 
 }
 
-const miniTooltip = new miniTooltipClass();
+const smallTooltip = new smallTooltipClass();
 
-module.exports = miniTooltip;
+module.exports = smallTooltip;
