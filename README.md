@@ -35,7 +35,9 @@ $ npm install small-tooltip
 
   // simple javascript
 
-  document.body.insertAdjacentHTML('beforeend', `<i data-id="This is Love!!">❤❤❤</i>`);
+  document.body.insertAdjacentHTML('beforeend', `
+    <i data-tip="I'm a lovely small tooltip!!">❤❤❤</i>
+  `);
 
   // or React
 
