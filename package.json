@@ -1,6 +1,6 @@
 {
   "name": "small-tooltip",
-  "version": "1.0.8",
+  "version": "1.1.1",
   "description": "Just a small tooltip for ES6 and/or React.",
   "main": "index.js",
   "scripts": {

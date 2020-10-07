@@ -16,19 +16,22 @@ $ npm install small-tooltip
 
 ```jsx
 
-  // just paste these two lines of code in your main file (index.js.. or app.js..)
+  // just paste these few lines of code in your main file (index.js.. or app.js..)
   // that's it, I will be always available in all the pages of your project!
   // ..available for the dynamic elements as well..
 
-  import smallTooltip from 'small-tooltip';
+  import SmallTooltip from 'small-tooltip';
   import 'small-tooltip/smallTooltip.css';    // <-- easy to customize
+
+  const smallTooltip = new SmallTooltip();
+  smallTooltip.init();
 
 ```
 
 ```html
 
   <!-- html -->
-
+  <div id="small-tooltip"></div>
   <div data-tip="I'm a small tooltip">Move your mouse here to see me</div>
 
 ```
@@ -37,6 +40,7 @@ $ npm install small-tooltip
 
   // simple javascript
 
+  document.body.insertAdjacentHTML('beforeend', `<div id="small-tooltip"></div>`);
   document.body.insertAdjacentHTML('beforeend', `
     <i data-tip="I'm a lovely small tooltip!!">❤❤❤</i>
   `);
@@ -46,7 +50,10 @@ $ npm install small-tooltip
   function App() {
 
     return (
-      <h2 data-tip="I'm another small tooltip">Move your mouse here to see me as well!</h2>
+      <>
+        <div id="small-tooltip"></div>
+        <h2 data-tip="I'm another small tooltip">Move your mouse here to see me as well!</h2>
+      </>
     );
 
   }

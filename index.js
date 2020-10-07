@@ -1,4 +1,4 @@
-class smallTooltipClass {
+export default class SmallTooltip {
 
 	constructor() {
 
@@ -13,7 +13,7 @@ class smallTooltipClass {
 
 	events() {
 
-		addEventListener("mouseover", (e) => {
+		document.addEventListener("mouseover", (e) => {
 			const tip = e.target.closest(this.allTipsSelector);
 			if (tip) {
 				const text = tip.getAttribute('data-tip');
@@ -21,7 +21,7 @@ class smallTooltipClass {
 					!this.isIn ||
 					(
 						text &&
-						this.lastText != text
+						this.lastText !== text
 					)
 				) {
 					this.isIn = true;
@@ -34,7 +34,7 @@ class smallTooltipClass {
 			}
 		});
 
-		addEventListener("mousemove", (e) => {
+		document.addEventListener("mousemove", (e) => {
 			if (this.isIn) {
 				this.moveSmallTooltip(e);
 			}
@@ -44,28 +44,40 @@ class smallTooltipClass {
 
 	showSmallTooltip(e, text) {
 		if (this.isIn) {
-			this.dom.classList.add("show");
-			this.moveSmallTooltip(e);
-			this.dom.innerHTML = text;
+			this.dom = document.querySelector("#small-tooltip");
+			if (this.dom) {
+				this.dom.classList.add("show");
+				this.moveSmallTooltip(e);
+				this.dom.innerHTML = text;
+			}
 		}
 	}
 
 	hideSmallTooltip() {
-		this.dom.classList.remove("show");
+		// if (this.isIn) {
+		this.dom = document.querySelector("#small-tooltip");
+		if (this.dom) {
+			this.dom.classList.remove("show");
+		}
+		// }
 	}
 
 	moveSmallTooltip(e) {
-		this.dom.style.top = e.pageY + 'px';
-		this.dom.style.left = e.pageX + 'px';
-		this.dom.style.marginLeft = (this.dom.offsetWidth / -2) + 'px';
+		if (this.isIn) {
+			this.dom = document.querySelector("#small-tooltip");
+			if (this.dom) {
+				this.dom.style.top = e.pageY + 'px';
+				this.dom.style.left = e.pageX + 'px';
+				this.dom.style.marginLeft = (this.dom.offsetWidth / -2) + 'px';
+			}
+		}
 	}
 
 	injectHTML() {
-		document.body.insertAdjacentHTML('beforeend', '<div id="small-tooltip"></div>');
+		//document.body.insertAdjacentHTML('beforeend', '<div id="small-tooltip"></div>');
 	}
+
+	init() { }
 
 }
 
-const smallTooltip = new smallTooltipClass();
-
-module.exports = smallTooltip;
