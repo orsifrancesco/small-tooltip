@@ -30,15 +30,19 @@ $ npm install small-tooltip
 
 ```html
 
-  <!-- html -->
+  <!-- html  ********** -->
+
+  <!-- insert <div id="small-tooltip"></div> somewhere on your main project file (index.js, app.js..), of course just one time! -->
   <div id="small-tooltip"></div>
+
+  <!-- example of usage -->  
   <div data-tip="I'm a small tooltip">Move your mouse here to see me</div>
 
 ```
 
 ```jsx
 
-  // simple javascript
+  // simple javascript **********
 
   // insert <div id="small-tooltip"></div> somewhere on your main project file (index.js, app.js..), of course just one time!
   document.body.insertAdjacentHTML('beforeend', `<div id="small-tooltip"></div>`);
@@ -48,7 +52,11 @@ $ npm install small-tooltip
     <i data-tip="I'm a lovely small tooltip!!">❤❤❤</i>
   `);
 
-  // or React
+```
+
+```jsx
+
+  // or React **********
 
   function App() {
 
